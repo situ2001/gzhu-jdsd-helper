@@ -5,6 +5,7 @@
   "repository": "https://github.com/situ2001/gzhu-jdsd-helper.git",
   "author": "situ2001 <yongcong2001@outlook.com>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "axios": "^0.21.4"
   }
