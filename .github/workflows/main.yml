@@ -35,5 +35,5 @@ jobs:
       - name: perform
         env:
             jdsd_key: ${{ secrets.jdsd_key }}
-      - run: yarn start
+        run: yarn start
       
