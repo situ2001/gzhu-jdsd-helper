@@ -1,6 +1,6 @@
 # gzhu-jdsd-helper
 
-How to easily earn 1 credit of yours? -- 广州大学经典棒读
+求求点下右上角的star（
 
 ## How to use
 
