@@ -16,4 +16,5 @@ Or if you run with GitHub Action, you should just set a secret named `jdsd_key` 
 - [x] ~~Daily practice~~
 - [x] ~~Daily reading~~
 - [ ] Error handling
+- [ ] CLI
 - [ ] PVP
