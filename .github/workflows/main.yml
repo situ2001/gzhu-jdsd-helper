@@ -28,7 +28,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-        env:
-          jdsd_key: ${{ secrets.JDSD_KEY }}
+        
       - run: yarn install
+      - run: npm install -g yarn
+      
+      - name: perform
+        env:
+            jdsd_key: ${{ secrets.jdsd_key }}
       - run: yarn start
+      
