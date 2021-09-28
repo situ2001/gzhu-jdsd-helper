@@ -3,9 +3,13 @@ import qs from "qs";
 import { key } from "../config.js";
 
 export default async function dailySignIn() {
+  console.log("日常登录开始...");
+
+  const _key = key || process.env.jdsd_key;
+
   // 1. form
   const form = qs.stringify({
-    key,
+    key: _key,
     route: "signin",
   });
 

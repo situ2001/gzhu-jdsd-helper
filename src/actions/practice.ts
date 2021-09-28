@@ -2,11 +2,13 @@ import qs from "qs";
 import { instance } from "../instance.js";
 import { key } from "../config.js";
 
-export default async function dailyPractice () {
+export default async function dailyPractice() {
+  const _key = key || process.env.jdsd_key;
+
   // 1. get info of id & items
   const form = qs.stringify({
     route: "train_list_get",
-    key,
+    key: _key,
     diff: "0",
   });
   const items = await instance.post("/", form);
@@ -21,12 +23,12 @@ export default async function dailyPractice () {
     route: "train_finish",
     train_id: items.data.re.train_id,
     train_result: JSON.stringify(arrayOfStatus),
-    key,
+    key: _key,
   });
 
   // 3. POST to server
   // 4. repeat 3 times
-  console.log("Daily practice starts...");
+  console.log("日常练习开始...");
   for (let i = 0; i < 3; i++) {
     await new Promise((resolve) => setTimeout(() => resolve(0), 1000));
     const result = await instance.post("/", dataForResult);
