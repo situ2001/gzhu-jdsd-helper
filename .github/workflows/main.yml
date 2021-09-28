@@ -29,6 +29,6 @@ jobs:
         with:
           node-version: '14'
         env:
-          jdsd_key: ${{ secrets.jdsd_key }}
+          jdsd_key: ${{ secrets.JDSD_KEY }}
       - run: yarn install
       - run: yarn start
