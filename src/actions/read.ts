@@ -23,10 +23,10 @@ export default async function dailyReading() {
 
   for (let i = 0; i < forms.length; i++) {
     const response = await instance.post("/", forms[i]);
-    if (response.data.done === 1) {
+    if (response.data.tip === undefined) {
       console.log(`今日${types[i]}的分已拿 请勿重复操作`);
     } else {
-      console.log(response.data.tip);
+      console.log(`今日${types[i]}的阅读 ${response.data.tip}`);
     }
   }
 }
