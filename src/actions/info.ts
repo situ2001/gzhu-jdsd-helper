@@ -12,7 +12,7 @@ export default async function getInfo() {
 
   const response = await instance.post("/", form);
   if (response.data) {
-    if (response.data === 1) {
+    if (response.data.status === 1) {
       console.log("你的积分为", response.data.re.credits);
     } else {
       console.log(response.data.error);
