@@ -5,7 +5,7 @@ import dailySignIn from "./actions/signin.js";
 import { key } from "./config.js";
 
 // main procedure begins
-console.log(process.env.jdsd_key);
+
 if (key.length !== 0 || process.env.jdsd_key) {
   await getInfo();
   await dailySignIn();
