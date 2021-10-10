@@ -1,7 +1,7 @@
 import getInfo from "./actions/info.js";
 import dailyPractice from "./actions/practice.js";
 import dailyReading from "./actions/read.js";
-import dailySignIn from "./actions/signin.js";
+import dailySignIn from "./actions/check_in.js";
 import { key } from "./config.js";
 
 // main procedure begins
