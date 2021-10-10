@@ -31,6 +31,7 @@ export default async function dailyReading() {
       }
     }
   } catch (e) {
+    console.log("每日一读突然失败了");
     console.error(e);
   }
 }

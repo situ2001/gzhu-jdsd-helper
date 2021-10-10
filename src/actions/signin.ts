@@ -21,6 +21,7 @@ export default async function dailySignIn() {
       console.log(response.data.tip);
     }
   } catch (e) {
+    console.log("打卡好像失败了");
     console.error(e);
   }
 }

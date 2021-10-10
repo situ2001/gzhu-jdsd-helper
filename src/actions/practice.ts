@@ -36,6 +36,7 @@ export default async function dailyPractice() {
       console.log(`No.${i}`, result.data.tip);
     }
   } catch (e) {
+    console.log("日常练习突然失败了");
     console.error(e);
   }
 }
