@@ -4,7 +4,7 @@
 
 ## How to use
 
-First, you should get `key` from the request to WeChat MiniProgram 广州大学经典诵读 by using fiddler.
+First, you should get `key` from the request to WeChat MiniProgram by using fiddler.
 
 Then, if you run locally, you should put your key in file `./src/config.ts` and execute command `yarn start`
 
