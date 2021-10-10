@@ -29,9 +29,13 @@ export default async function dailyPractice() {
   // 3. POST to server
   // 4. repeat 3 times
   console.log("日常练习开始...");
-  for (let i = 0; i < 3; i++) {
-    await new Promise((resolve) => setTimeout(() => resolve(0), 1000));
-    const result = await instance.post("/", dataForResult);
-    console.log(`No.${i}`, result.data.tip);
+  try {
+    for (let i = 0; i < 3; i++) {
+      await new Promise((resolve) => setTimeout(() => resolve(0), 1000));
+      const result = await instance.post("/", dataForResult);
+      console.log(`No.${i}`, result.data.tip);
+    }
+  } catch (e) {
+    console.error(e);
   }
 }
