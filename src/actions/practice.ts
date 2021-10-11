@@ -11,32 +11,37 @@ export default async function dailyPractice() {
     key: _key,
     diff: "0",
   });
-  const items = await instance.post("/", form);
-
-  // 2. construct a form
-  const arrayOfStatus = items.data.re.question_bag.map((question) => [
-    question.num,
-    "1",
-  ]);
-
-  const dataForResult = qs.stringify({
-    route: "train_finish",
-    train_id: items.data.re.train_id,
-    train_result: JSON.stringify(arrayOfStatus),
-    key: _key,
-  });
-
-  // 3. POST to server
-  // 4. repeat 3 times
-  console.log("日常练习开始...");
   try {
+    const items = await instance.post("/", form);
+
+    // 2. construct a form
+    const arrayOfStatus = items.data.re.question_bag.map((question) => [
+      question.num,
+      "1",
+    ]);
+
+    const dataForResult = qs.stringify({
+      route: "train_finish",
+      train_id: items.data.re.train_id,
+      train_result: JSON.stringify(arrayOfStatus),
+      key: _key,
+    });
+
+    // 3. POST to server
+    // 4. repeat 3 times
+    console.log("日常练习开始...");
     for (let i = 0; i < 3; i++) {
-      await new Promise((resolve) => setTimeout(() => resolve(0), 1000));
-      const result = await instance.post("/", dataForResult);
-      console.log(`No.${i}`, result.data.tip);
+      try {
+        await new Promise((resolve) => setTimeout(() => resolve(0), 1000));
+        const result = await instance.post("/", dataForResult);
+        console.log(`No.${i}`, result.data.tip);
+      } catch (e) {
+        console.log("日常练习突然失败了");
+        console.error(e);
+      }
     }
   } catch (e) {
-    console.log("日常练习突然失败了");
-    console.error(e);
+    console.log("题目获取失败");
+    console.log(e);
   }
 }
