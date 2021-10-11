@@ -21,17 +21,17 @@ export default async function dailyReading() {
     .fill(undefined)
     .map((_, i) => buildForm(i + 1));
 
-  try {
-    for (let i = 0; i < forms.length; i++) {
+  for (let i = 0; i < forms.length; i++) {
+    try {
       const response = await instance.post("/", forms[i]);
       if (response.data.tip === undefined) {
         console.log(`今日${types[i]}的分已拿 请勿重复操作`);
       } else {
         console.log(`今日${types[i]}的阅读 ${response.data.tip}`);
       }
+    } catch (e) {
+      console.log("每日一读突然失败了");
+      console.error(e);
     }
-  } catch (e) {
-    console.log("每日一读突然失败了");
-    console.error(e);
   }
 }
