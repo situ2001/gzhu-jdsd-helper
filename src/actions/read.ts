@@ -30,8 +30,8 @@ export default async function dailyReading() {
         console.log(`今日${types[i]}的阅读 ${response.data.tip}`);
       }
     } catch (e) {
-      console.log("每日一读突然失败了");
-      console.error(e);
+      console.log(`每日一读的${types[i]}突然失败了`);
+      // console.error(e);
     }
   }
 }

@@ -36,12 +36,12 @@ export default async function dailyPractice() {
         const result = await instance.post("/", dataForResult);
         console.log(`No.${i}`, result.data.tip);
       } catch (e) {
-        console.log("日常练习突然失败了");
-        console.error(e);
+        console.log(`日常练习No.${i}突然失败了`);
+        // console.error(e);
       }
     }
   } catch (e) {
     console.log("题目获取失败");
-    console.log(e);
+    // console.log(e);
   }
 }

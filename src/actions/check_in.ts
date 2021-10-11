@@ -1,6 +1,7 @@
 import { instance } from "../instance.js";
 import qs from "qs";
 import { key } from "../config.js";
+import { AxiosError } from "axios";
 
 export default async function dailySignIn() {
   console.log("日常登录开始...");
@@ -22,6 +23,6 @@ export default async function dailySignIn() {
     }
   } catch (e) {
     console.log("打卡好像失败了");
-    console.error(e);
+    // console.error(e);
   }
 }

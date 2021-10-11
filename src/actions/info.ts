@@ -22,6 +22,6 @@ export default async function getInfo() {
     }
   } catch (e) {
     console.log("获取用户信息失败");
-    console.error(e);
+    // console.error(e);
   }
 }
