@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "axios": "^0.21.4",
-    "axios-retry": "^3.2.0",
-    "qs": "^6.10.1"
+    "axios-retry": "^3.2.4",
+    "qs": "^6.10.3"
   },
   "devDependencies": {
     "@types/node": "^16.9.6",
