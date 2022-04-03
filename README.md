@@ -10,7 +10,7 @@ Then, if you run locally, you should put your key into file `./src/config.ts` an
 
 Or if you run with GitHub Action, you should just set a secret named `jdsd_key` with your `key` as its value. (The workflow runs **every day at 9:00 CST**)
 
-## Todo
+## Todos
 
 - [x] ~~Daily sign-in~~
 - [x] ~~Daily practice~~
@@ -18,4 +18,4 @@ Or if you run with GitHub Action, you should just set a secret named `jdsd_key` 
 - [x] ~~Error handling with retrying~~
 - [ ] HTTP MITM proxy
 - [ ] CLI
-- [ ] ~~PVP~~
+- [ ] ~~PVP（不道德）~~
