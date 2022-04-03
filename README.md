@@ -1,6 +1,6 @@
 # gzhu-jdsd-helper
 
-求求点下右上角的star（
+Your star is the biggest motivation for me.
 
 ## How to use
 
@@ -16,5 +16,6 @@ Or if you run with GitHub Action, you should just set a secret named `jdsd_key` 
 - [x] ~~Daily practice~~
 - [x] ~~Daily reading~~
 - [x] ~~Error handling with retrying~~
+- [ ] HTTP MITM proxy
 - [ ] CLI
-- [ ] PVP
+- [ ] ~~PVP~~
